@@ -7,7 +7,7 @@ on:
     types: [base-container-updated]
 
 env:
-  REPO: "owasp/modsecurity-crs"
+  REPO: "ibook163/modsecurity-crs"
 
 jobs:
   build:
