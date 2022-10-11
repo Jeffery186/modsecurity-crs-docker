@@ -25,7 +25,8 @@ LABEL maintainer="Felipe Zipitria <felipe.zipitria@owasp.org>"
 # overridden variables
 ENV USER=nginx \
     MODSEC_PCRE_MATCH_LIMIT=100000 \
-    MODSEC_PCRE_MATCH_LIMIT_RECURSION=100000
+    MODSEC_PCRE_MATCH_LIMIT_RECURSION=100000 \
+    MODSEC_REQ_BODY_NOFILES_LIMIT=3145728
 
 # CRS specific variables
 ENV USER=nginx \
