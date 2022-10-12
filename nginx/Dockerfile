@@ -47,4 +47,7 @@ COPY nginx/docker-entrypoint.d/*.sh /docker-entrypoint.d/
 COPY src/opt/modsecurity/activate-rules.sh /docker-entrypoint.d/95-activate-rules.sh
 COPY --from=release /opt/owasp-crs /opt/owasp-crs
 
-RUN  set -eux; ln -sv /opt/owasp-crs /etc/modsecurity.d/
+RUN  set -eux; ln -sv /opt/owasp-crs /etc/modsecurity.d/; \
+     apt-get update; \
+     apt-get -y install --no-install-recommends vim; \
+     mkdir -p /var/log/modsecurity/audit/
