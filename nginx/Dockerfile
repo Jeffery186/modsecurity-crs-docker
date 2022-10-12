@@ -26,8 +26,8 @@ LABEL maintainer="Felipe Zipitria <felipe.zipitria@owasp.org>"
 ENV USER=nginx \
     MODSEC_PCRE_MATCH_LIMIT=100000 \
     MODSEC_PCRE_MATCH_LIMIT_RECURSION=100000 \
-    MODSEC_AUDIT_STORAGE="/var/log" \
-    MODSEC_AUDIT_LOG="/var/log/modsec_audit.log" \
+    MODSEC_AUDIT_STORAGE="/var/log/modsecurity/audit" \
+    MODSEC_AUDIT_LOG="/var/log/modsecurity/audit/modsec_audit.log" \
     MODSEC_REQ_BODY_NOFILES_LIMIT=3145728
 
 # CRS specific variables
