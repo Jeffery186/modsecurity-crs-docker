@@ -8,7 +8,6 @@ RUN set -eux; \
     apt-get -y install --no-install-recommends \
       ca-certificates \
       curl \
-      vim \
       gnupg; \
     mkdir /opt/owasp-crs; \
     curl -SL https://github.com/coreruleset/coreruleset/archive/v${RELEASE}.tar.gz -o v${RELEASE}.tar.gz; \
