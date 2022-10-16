@@ -1,4 +1,4 @@
-FROM owasp/modsecurity:3.0.8 as release
+FROM owasp/modsecurity:3.0.7 as release
 
 ARG RELEASE
 
@@ -18,7 +18,7 @@ RUN set -eux; \
     rm -f v${RELEASE}.tar.gz coreruleset-${RELEASE}.tar.gz.asc; \
     mv -v /opt/owasp-crs/crs-setup.conf.example /opt/owasp-crs/crs-setup.conf
 
-FROM owasp/modsecurity:3.0.8
+FROM owasp/modsecurity:3.0.7
 
 LABEL maintainer="Felipe Zipitria <felipe.zipitria@owasp.org>"
 
